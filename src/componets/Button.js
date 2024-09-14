@@ -16,6 +16,7 @@ function calculationFunction(){
   }
   else{
     res = <p className='text-2xl'>No Value to display 0.00</p>
+    setIsRes(res)
   }
 }
   return (

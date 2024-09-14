@@ -2,11 +2,19 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function Input({children, onChangeFunction}) {
-    const [isNum, setIsNum] = useState()
+    const [isNum, setIsNum] = useState('')
     function handleFunction(event){
-       const value = event.target.value
+        const value = event.target.value
+        if(value ===''){
+            
+       setIsNum('')
+       onChangeFunction('') 
+        }
+        else{
+      
        setIsNum(Number(value))
        onChangeFunction(Number(value))
+        }
     }
   return (
     <>
